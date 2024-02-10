@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Atualização</title>
+    <style>
+        /* Definições gerais */
+        body {
+            font-family: Arial, sans-serif;
+            color: #a1a1a1;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #001529f3;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para o contêiner de notícias */
+        .news-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Estilo para a imagem da notícia */
+        .news-image img {
+            width: 100%;
+        }
+
+        /* Estilo para o cabeçalho da notícia */
+        .news-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        /* Estilo para a seção de notícias */
+        .news-section {
+            margin-top: 20px;
+            color: #a1a1a1;
+        }
+
+        /* Estilo para os parágrafos dentro da seção de notícias */
+        .news-section p {
+            margin: 10px 0;
+        }
+
+        /* Estilo para as imagens dentro da seção de notícias */
+        .news-section img {
+            width: 100%;
+        }
+
+        /* Estilo para a lista não ordenada dentro da seção de notícias */
+        .news-section ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        /* Estilo para os itens da lista dentro da seção de notícias */
+        .news-section li {
+            margin-bottom: 5px;
+        }
+
+        /* Estilo para os cabeçalhos de segundo nível (h2) */
+        h2 {
+            margin-top: 10px;
+            font-size: 24px;
+        }
+
+        /* Estilo para spans */
+        span {
+            font-size: 14px;
+            color: #a1a1a1;
+        }
+
+        /* Estilo para o botão de fechar */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px;
+            background-color: #FFC04D;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Estilo para o fundo */
+        body {
+            background-color: #001529ee;
+        }
+
+        /* Estilo para a resolução de 1400px */
+        @media (max-width: 1400px) {
+            .container {
+                max-width: 1200px;
+                padding: 40px;
+            }
+
+            .news-container {
+                max-width: 1000px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="news-container">
+            <button class="close-button" onclick="enviarMensagemFecharPagina('update.html')">Fechar</button>
+            <div class="news-image">
+                <img src="https://cdn.discordapp.com/attachments/1058552286911156334/1127377477749182495/Nota_de_Atuacao_wolf.png" alt="News Image">
+            </div>
+            <header>
+                <div class="news-header">
+                    <strong>NOTÍCIAS</strong>
+                    <span>DATA - HORA</span>
+                </div>
+                <h2>NOME DA Atualização</h2>
+            </header>
+            <section>
+                <section class="news-section">
+                    <p></p>
+                    <img loading="lazy" src="https://cdn.discordapp.com/attachments/1058552286911156334/1127428668172554290/F1.png" alt="Image 1">
+                    <ul>
+                        <li>Adicionado nitro (houveram correções e melhorias);</li>
+                    </ul>
+                    <p></p>
+                    <img loading="lazy" src="Imagem ou gif do que se quer mostar" alt="Image 2">
+                    <ul>
+                        <li>Adicionado local para alugar guincho;</li>
+                        <li>Adicionado novas armas;</li>
+                        <li>Adicionado autoatendimento para restaurantes ;</li>
+                        <li>Alterado localização da Benny's.</li>
+                    </ul>
+                    <img loading="lazy" src="https://cdn.discordapp.com/attachments/1058552286911156334/1127428667807629422/M1.png" alt="Image 3">
+                    <ul>
+                        <li>Jogadores agora podem carregar de 1 a 4 pneus em seu inventário;</li>
+                        <li>Tec9, Skorpion e AP Pistol agora podem ser utilizadas em motos.</li>
+                    </ul>
+                    <!-- More content... -->
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function enviarMensagemFecharPagina(arquivo) {
+            var iframe = window.parent.document.getElementById("iframe");
+
+            // Envia uma mensagem para o documento pai com o nome do arquivo
+            window.parent.postMessage(arquivo, "*");
+        }
+    </script>
+</body>
+</html>
